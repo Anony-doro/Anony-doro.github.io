@@ -35,6 +35,3 @@ toc: true
 **1st Place, VEX Robotics Competition**
 *NTU Robotics Club | May 2025*
 * Mechanical Lead for the winning robot (Tennis ball retrieval task).
-
-**Dean's List (Example - if applicable)**
-*Nanyang Technological University | Academic Year 2024*
