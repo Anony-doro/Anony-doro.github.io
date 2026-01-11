@@ -1,0 +1,56 @@
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  {% if site.author.avatar %}
+    <div class="author__avatar">
+      <a href="{{ '/' | relative_url }}">
+        <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  {% endif %}
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="{{ '/' | relative_url }}" itemprop="url">{{ site.author.name }}</a>
+    </h3>
+    {% if site.author.bio %}
+      <div class="author__bio p-note" itemprop="description">
+        {{ site.author.bio | markdownify }}
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="author__urls-wrapper">
+    <ul class="author__urls social-icons">
+      {% if site.author.location %}
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">{{ site.author.location }}</span>
+        </li>
+      {% endif %}
+
+      {% if site.author.links %}
+        {% for link in site.author.links %}
+          {% if link.label and link.url %}
+            <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i><span class="label">{{ link.label }}</span></a></li>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+
+      {% if site.author.uri %}
+        <li>
+          <a href="{{ site.author.uri }}" itemprop="url">
+            <i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if site.author.email %}
+        <li>
+          <a href="mailto:{{ site.author.email }}" class="u-email">
+            <meta itemprop="email" content="{{ site.author.email }}" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</span>
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+</div>

@@ -19,11 +19,18 @@ description: "Mechanical & Robotics Engineer | NTU Singapore"
 # url: "https://yourusername.github.io" # 본인 주소로 변경
 
 # Author Info
-twitter_username: username
+#twitter_username: username
 github_username: Anony-doro
-minimal_mistakes_skin: default
+minimal_mistakes_skin: dark
+email: "baic0003@e.ntu.edu.sg"
 search: true
 
+# Search Settings
+search: true                   # 검색 기능 켜기
+search_full_content: true      # 제목뿐만 아니라 본문 내용까지 검색
+search_provider: lunr          # 내장 엔진 사용 (별도 API 키 필요 없음)
+lunr:
+  search_within_pages: true    # 페이지 내용도 검색 포함
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
@@ -60,19 +67,29 @@ plugins:
 author:
   name   : "Geunmyeong Baick"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "NTU Mechanical Eng Graduate in Robotics and Mechatronics Stream"
+  bio    : "NTU Mechanical Engineering Graduate (Highest Distinction) in Robotics and Mechatronics Stream"
   links:
     
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/"
 
+# _config.yml 파일 하단에 추가 또는 수정
+
 footer:
   links:
-    
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:baic0003@e.ntu.edu.sg"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/본인아이디"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Anony-doro"
+    # - label: "Instagram"  # 필요하면 주석 풀고 쓰세요
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://instagram.com/..."
     
 
 defaults:
